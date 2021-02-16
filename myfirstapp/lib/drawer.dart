@@ -13,7 +13,7 @@ class MyDrawer extends StatelessWidget {
           crossAxisAlignment:CrossAxisAlignment.stretch,
           children:<Widget>[
             DrawerHeader(
-              decoration:BoxDecoration(color:Colors.blue),
+              decoration:BoxDecoration(color:Colors.green),
               child:Padding(
                 padding:EdgeInsets.all(6),
                 child:Column(
@@ -24,14 +24,13 @@ class MyDrawer extends StatelessWidget {
                       width:60,
                       height:60,
                       child:CircleAvatar(
-                        backgroundImage:AssetImage('images/superhero.jpg'),
-                      ),
+                        radius: 100.0,
+                        backgroundImage:
+                        NetworkImage('https://apprecs.org/gp/images/app-icons/300/d8/com.jerry.sbsNextBus.jpg'),
+                      )
                     ),
                     SizedBox(height:15,),
                     Text('Worry Less Ride Now!', style:TextStyle(fontSize:16,fontWeight:FontWeight.bold,color:Colors.white),
-                    ),
-                    SizedBox(height:3,),
-                    Text('weird email placeholder', style:TextStyle(fontSize:12,color:Colors.white),
                     ),
                   ],
                 ),
