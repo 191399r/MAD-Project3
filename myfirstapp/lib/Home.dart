@@ -4,7 +4,7 @@ import 'nestapi.dart';
 class Home extends StatelessWidget {
 
   List<Value> BStops = [
-
+    Value(busStopCode: '01012',roadName: 'Victoria St', description: 'Hotel Grand Pacific'),
   ];
 
   @override
@@ -16,9 +16,9 @@ class Home extends StatelessWidget {
           return Card(
             child:ListTile(
               onTap: () {},
-              title:Text(BStops[index].location),
+              title:Text(BStops[index].roadName),
             )
-          )
+          );
         }
       )
     );
