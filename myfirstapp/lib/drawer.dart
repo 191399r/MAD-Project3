@@ -28,7 +28,7 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height:15,),
-                    Text('Super Hero', style:TextStyle(fontSize:16,fontWeight:FontWeight.bold,color:Colors.white),
+                    Text('Worry Less Ride Now!', style:TextStyle(fontSize:16,fontWeight:FontWeight.bold,color:Colors.white),
                     ),
                     SizedBox(height:3,),
                     Text('weird email placeholder', style:TextStyle(fontSize:12,color:Colors.white),
