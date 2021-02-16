@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
+  final Function onTap;
+  MyDrawer({this.onTap});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -30,11 +33,26 @@ class MyDrawer extends StatelessWidget {
                     SizedBox(height:3,),
                     Text('weird email placeholder', style:TextStyle(fontSize:12,color:Colors.white),
                     ),
-                  ]
-                )
-              )
-            )
-          ]
+                  ],
+                ),
+              ),
+            ),
+            ListTile(
+              leading:Icon(Icons.home),
+              title:Text('Home'),
+              onTap:() => onTap(context, 0, 'Home'),
+            ),
+            ListTile(
+              leading:Icon(Icons.person),
+              title:Text('Profile'),
+              onTap:() => onTap(context, 1, 'Profile'),
+            ),
+            ListTile(
+              leading:Icon(Icons.exit_to_app),
+              title:Text('Logout'),
+              onTap:() => onTap(context, 0, 'Home'),
+            ),
+          ],
         )
       )
     );

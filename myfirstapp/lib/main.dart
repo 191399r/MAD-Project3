@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'drawer.dart';
+import 'Profile.dart';
+import 'Home.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,29 +32,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
+String title = 'Home';
+int index = 0;
+List<Widget> list = [Home(),Profile()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'testing',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
+      //body: Home(),
+      //drawer: MyDrawer(),
+      body: list[index],
+      drawer: MyDrawer(onTap:(context,i,txt){
+        setState((){
+          index = i;
+          title = txt;
+          Navigator.pop(context);
+        });
+      })
     );
   }
 }
