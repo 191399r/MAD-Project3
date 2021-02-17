@@ -13,7 +13,8 @@ class MyDrawer extends StatelessWidget {
           crossAxisAlignment:CrossAxisAlignment.stretch,
           children:<Widget>[
             DrawerHeader(
-              decoration:BoxDecoration(color:Colors.green),
+              decoration:BoxDecoration( image: DecorationImage(
+          image: AssetImage("images/bus.jpg"),fit: BoxFit.cover)),
               child:Padding(
                 padding:EdgeInsets.all(6),
                 child:Column(
@@ -43,8 +44,13 @@ class MyDrawer extends StatelessWidget {
             ),
             ListTile(
               leading:Icon(Icons.person),
+              title:Text('About'),
+              onTap:() => onTap(context, 1, 'About'),
+            ),
+            ListTile(
+              leading:Icon(Icons.person),
               title:Text('Profile'),
-              onTap:() => onTap(context, 1, 'Profile'),
+              onTap:() => onTap(context, 2, 'Profile'),
             ),
             ListTile(
               leading:Icon(Icons.exit_to_app),

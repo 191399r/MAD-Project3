@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'About.dart';
 import 'drawer.dart';
 import 'Profile.dart';
 import 'Home.dart';
@@ -34,7 +35,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 String title = 'Home';
 int index = 0;
-List<Widget> list = [Home(),Profile()];
+List<Widget> list = [Home(),About(),Profile()];
 
   @override
   Widget build(BuildContext context) {
