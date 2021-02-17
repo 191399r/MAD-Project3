@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstapp/location.dart';
 import 'nestapi.dart';
 
 class Home extends StatelessWidget {
@@ -12,6 +13,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void _location() {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
+    }
     return Scaffold(
       body: ListView.builder(
           padding: EdgeInsets.all(10.0),
@@ -19,7 +23,7 @@ class Home extends StatelessWidget {
         itemBuilder: (context, index){
           return Card(
             child:ListTile(
-              onTap: () {},
+              onTap: _location,
               title:Text(BStops[index].busStopCode +'   '+ BStops[index].description),
             )
           );
