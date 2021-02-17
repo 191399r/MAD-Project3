@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-void main() => runApp(Location());
 
 class Location extends StatefulWidget {
   @override
@@ -24,8 +23,18 @@ class _LocationState extends State<Location> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Maps Sample App'),
-          backgroundColor: Colors.green[700],
+          leading:IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
+          backgroundColor: Colors.green,
+          title: Text('Bus Stop Location'),
+          actions: <Widget>[
+          ],
         ),
         body: GoogleMap(
           onMapCreated: _onMapCreated,

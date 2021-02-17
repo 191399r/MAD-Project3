@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  latlng: any
   http: any
   cached_network_image: ^2.5.0
   google_maps_flutter: ^0.4.0

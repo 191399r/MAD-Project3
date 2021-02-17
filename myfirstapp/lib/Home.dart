@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
           return Card(
             child:ListTile(
               onTap: _location,
-              title:Text(BStops[index].busStopCode +'   '+ BStops[index].description),
+              title:Text(BStops[index].busStopCode +'   '+ BStops[index].description, style: TextStyle(fontSize: 20,fontWeight:FontWeight.bold),),
             )
           );
         }
