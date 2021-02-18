@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstapp/authenticate/sign_in.dart';
+import 'package:myfirstapp/services/auth.dart';
+import 'package:myfirstapp/wrapper.dart';
 import 'About.dart';
 import 'drawer.dart';
 import 'Profile.dart';
 import 'Home.dart';
+import 'package:provider/provider.dart';
+import 'package:myfirstapp/user.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,13 +17,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+    return StreamProvider<User>.value(
+      value:AuthService().user,
+      child:MaterialApp(
+      home: Wrapper(),
       ),
-      home: MyHomePage(title: 'Worry Less Ride Now!'),
     );
   }
 }
