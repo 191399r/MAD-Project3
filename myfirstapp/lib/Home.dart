@@ -17,6 +17,7 @@ class Home extends StatelessWidget {
       Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
     }
     return Scaffold(
+      backgroundColor: Colors.brown[100],
       body: ListView.builder(
           padding: EdgeInsets.all(10.0),
         itemCount: BStops.length,

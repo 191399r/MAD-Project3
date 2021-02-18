@@ -43,7 +43,7 @@ class MyDrawer extends StatelessWidget {
               onTap:() => onTap(context, 0, 'Home'),
             ),
             ListTile(
-              leading:Icon(Icons.person),
+              leading:Icon(Icons.account_tree),
               title:Text('About'),
               onTap:() => onTap(context, 1, 'About'),
             ),
@@ -57,7 +57,7 @@ class MyDrawer extends StatelessWidget {
               title:Text('Logout'),
               onTap:() => onTap(context, 0, 'Home'),
             ),
-          ],
+            ],
         )
       )
     );
